@@ -27,17 +27,17 @@ Dynamic Endpoint Output: The deployment automatically exports and prints the dir
 📂 Project Structure
 
 modules/wordpress/
-main.tf            Core EC2 and Security Group resources
-variables.tf       Module input definitions (instance_type, ami_id)
-outputs.tf         Exports instance IP and dynamic URL
-userdata.sh        Bash script for bootstrapping Apache, PHP, MariaDB, and WordPress
+- main.tf            Core EC2 and Security Group resources
+- variables.tf       Module input definitions (instance_type, ami_id)
+- outputs.tf         Exports instance IP and dynamic URL
+- userdata.sh        Bash script for bootstrapping Apache, PHP, MariaDB, and WordPress
 
 ROOT FOLDER:
 
-provider.tf               # AWS provider configuration and S3 backend setup
-root-variables.tf         # Authorized root inputs and defaults
-main.tf                   # Root module calling the WordPress child module
-.gitignore                # Prevents tracking of sensitive state and tfvars files
+- provider.tf               # AWS provider configuration and S3 backend setup
+- root-variables.tf         # Authorized root inputs and defaults
+- main.tf                   # Root module calling the WordPress child module
+- .gitignore                # Prevents tracking of sensitive state and tfvars files
 
 ⚙️ How to Deploy
 
