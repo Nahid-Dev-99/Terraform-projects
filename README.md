@@ -25,22 +25,22 @@ Automated Database Setup: The provisioning script dynamically creates the wordpr
 Dynamic Endpoint Output: The deployment automatically exports and prints the direct public IP and HTTP URL to the terminal upon completion.
 
 📂 Project Structure
-├── modules/
-│   └── wordpress/
-│       ├── main.tf           # Core EC2 and Security Group resources
-│       ├── variables.tf      # Module input definitions (instance_type, ami_id)
-│       ├── outputs.tf        # Exports instance IP and dynamic URL
-│       └── userdata.sh       # Bash script for bootstrapping Apache, PHP, MariaDB, and WordPress
-├── provider.tf               # AWS provider configuration and S3 backend setup
-├── root-variables.tf         # Authorized root inputs and defaults
-├── main.tf                   # Root module calling the WordPress child module
-└── .gitignore                # Prevents tracking of sensitive state and tfvars files
+modules/wordpress/
+main.tf           # Core EC2 and Security Group resources
+variables.tf      # Module input definitions (instance_type, ami_id)
+outputs.tf        # Exports instance IP and dynamic URL
+userdata.sh       # Bash script for bootstrapping Apache, PHP, MariaDB, and WordPress
+ROOT FOLDER:
+provider.tf               # AWS provider configuration and S3 backend setup
+root-variables.tf         # Authorized root inputs and defaults
+main.tf                   # Root module calling the WordPress child module
+.gitignore                # Prevents tracking of sensitive state and tfvars files
 
 ⚙️ How to Deploy
 Clone the repository:
 
 Bash
-git clone https://github.com/[YOUR_GITHUB_USERNAME]/[YOUR_REPO_NAME].git
+git clone https://github.com/Nahid-Dev-99/Terraform-projects/tree/main.git
 cd [YOUR_REPO_NAME]
 Initialize Terraform: Downloads the AWS provider and configures the S3 backend.
 
